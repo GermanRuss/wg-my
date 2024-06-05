@@ -98,6 +98,11 @@ select opt in "${options[@]}"; do
     "wg-easy")
         docker run -d \
             --name=wg-easy \
+            -e LANG=ru \
+            -e WG_DEFAULT_ADDRESS=10.13.13.x \
+            -e WG_DEFAULT_DNS=1.1.1.1, 8.8.8.8, 77.88.8.8 \
+            -e UI_TRAFFIC_STATS=true \
+            -e UI_CHART_TYPE=1 \
             -e WG_HOST=$hostip \
             -e PASSWORD=$admpass \
             -v /root/wg-easy:/etc/wireguard \
