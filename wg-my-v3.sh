@@ -100,8 +100,7 @@ select opt in "${options[@]}"; do
             --name=wg-easy \
             -e LANG=ru \
             -e WG_DEFAULT_ADDRESS=10.13.13.x \
-            -e WG_DEFAULT_DNS=1.1.1.1 \
-            -e WG_DEFAULT_DNS=77.88.8.8 \
+            -e WG_DEFAULT_DNS=1.1.1.1,77.88.8.8 \
             -e WG_PERSISTENT_KEEPALIVE=25 \
             -e UI_TRAFFIC_STATS=true \
             -e UI_CHART_TYPE=2 \
